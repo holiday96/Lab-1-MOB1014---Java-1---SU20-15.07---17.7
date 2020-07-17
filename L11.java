@@ -51,6 +51,10 @@ public class L11 {
 			System.out.print("Nhập tuổi: ");
 			try {
 				l11.setAge(Integer.parseInt(sc.nextLine()));
+				if(l11.getAge()<=0) {
+					System.out.println("Số tuổi vừa nhập không hợp lệ! Nhập lại!!");
+					continue;
+				}
 				break;
 			} catch (Exception e) {
 				System.out.println("Nhập tuổi sai rồi! Nhập lại xem nào!!");
@@ -91,6 +95,10 @@ public class L11 {
 			System.out.print("Nhập số thành viên trong gia đình: ");
 			try {
 				n = Integer.parseInt(sc.nextLine());
+				if (n <= 0) {
+					System.out.println("Số thành viên không hợp lệ!");
+					continue;
+				}
 				break;
 			} catch (Exception e) {
 				System.out.println("Dữ liệu vừa nhập sai!! Nhập lại!!");

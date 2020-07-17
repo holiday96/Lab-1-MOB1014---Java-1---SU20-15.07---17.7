@@ -13,6 +13,10 @@ public class L10 {
 			System.out.print("Nhập số thành viên trong gia đình: ");
 			try {
 				n = Integer.parseInt(sc.nextLine());
+				if (n <= 0) {
+					System.out.println("Số thành viên không hợp lệ!");
+					continue;
+				}
 				break;
 			} catch (Exception e) {
 				System.out.println("Dữ liệu vừa nhập sai!! Nhập lại!!");
@@ -28,6 +32,10 @@ public class L10 {
 				System.out.print("Thành viên thứ " + (i + 1) + ": ");
 				try {
 					weightFamily[i] = Double.parseDouble(sc.nextLine());
+					if (weightFamily[i] <= 0) {
+						System.out.println("Số đo cân nặng không hợp lệ!");
+						continue;
+					}
 					break;
 				} catch (Exception e) {
 					System.out.println("Nhập dữ liệu sai! Nhập lại nào!!");
